@@ -18,7 +18,7 @@ function RequestKey(key){
     var KeyUrl = `https://tooltranthuong.blogspot.com/p/key_25.html?key=${key}`;
     ShowLink.innerHTML = `Link Key Của Bạn Đã Được Tạo <a class='Link' href=${KeyUrl}>Ở Đây<a>`;
 }
-Submit.addEventListener("click",function(){
+function Run() {
     if (ID.value === ""){
         alert("Không Được Để ID Trống");
     } else if ((ID.value.trim().indexOf(" ") >= 0)||(regex.test(ID.value))||(ID.value.length < 10)){
@@ -27,4 +27,4 @@ Submit.addEventListener("click",function(){
         var Key = RandomKey();
         RequestKey(Key);
     }
-});
+};
