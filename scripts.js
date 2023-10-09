@@ -16,7 +16,7 @@ function RequestKey(){
     var key = RandomKey();
     fetch(`https://thuongpro.name.vn/api/api.php?key=${key}&id_drive=${ID.value}`);
     for (var i = 2;i>0;i--){
-        var response = fetch(`https://thuongpro.name.vn/key.php?key=${key}`, {
+        fetch(`https://thuongpro.name.vn/key.php?key=${key}`, {
             "headers": {
                 "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
                 "accept-language": "vi,en;q=0.9",
@@ -36,7 +36,7 @@ function RequestKey(){
             "credentials": "omit"
         });
     }
-    ShowKey.innerHTML = `Key Của Bạn Là : <p class='Key'>${key}<p>`
+    ShowKey.innerHTML = `Key Của Bạn Là : <p id='Key'>${key}</p>`
 }
 
 function Run() {
@@ -48,3 +48,5 @@ function Run() {
         RequestKey();
     }
 };
+
+
