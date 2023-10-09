@@ -13,8 +13,10 @@
             .Title {
                 text-align: center;
                 color: #00a2ff;
+                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             }
             #Container {
+                text-align: center;
                 margin: 0 auto;
                 height: auto;
                 border-radius: 5px;
@@ -24,7 +26,7 @@
                 background-repeat: no-repeat;
                 background-size: cover;
             }
-            hr {
+            .Short {
                 border: none;
                 margin: 5 auto;
                 border-radius: 5px;
@@ -43,14 +45,16 @@
             #InputID:hover {
                 border: 3px grey outset;
             }
-            p {
+            .Suggest {
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
                 color: rgb(0, 255, 128);
-                font-size: 30px;
+                font-size: 25px;
             }
             #SubmitID {
                 height: 36px;
                 border-radius: 5px;
-                background-color: rgb(129, 255, 117);
+                background-color: rgb(0, 255, 34);
+                color: rgb(124, 122, 122);
             }
             #SubmitID:hover {
                 background-color: rgb(3, 219, 21);
@@ -63,21 +67,36 @@
             .Link {
                 color:#00ffaa;
             }
-            .Note {
+            .LinkDownload {
                 color: #2600ff;
                 font-size: 20px;
+            }
+            .Notes {
+                text-align: left;
+                margin: 10 auto;
+                font-size: large;
+                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+            .Long {
+                border: 3px rgb(0, 195, 255) solid;
             }
         </style>
     </head>
     <body>
-        <h1 class="Title">Website Tạo Key Chạy Tool Miễn Phí</h>
-        <hr>
+        <h1 class="Title">Website Tạo Key Chạy Tool Miễn Phí</h1>
+        <hr class="Short">
         <div id="Container">
-            <p>Nhập ID Android Vào Bên Dưới</p>
+            <p class="Suggest">Nhập ID Android Vào Bên Dưới</p>
             <input type="text" name="AndroidID" id="InputID">
             <input type="submit" id="SubmitID" value="Tạo">
             <p id="ShowLink"></p>
-            <p class="Note">Tải ứng Dụng Lấy ID Android <a class="Link" href="Get_ID_Android_v1.apk">Tại Đây</a></p>
+            <p class="LinkDownload">Tải ứng Dụng Lấy ID Android <a class="Link" href="Get_ID_Android_v1.apk">Tại Đây</a></p>
+            <hr class="Long">
+            <ul class="Notes">
+                <li style="color: rgb(255, 0, 0);">⚠️ Nếu Android ID Không Đúng Sẽ Không Hoạt Động</li>
+                <li style="color: rgb(255, 123, 0);">🔒 Ứng Dụng Chỉ 17KB Nên Sẽ Không Có Mã Độc</li>  
+                <li style="color: rgb(0, 255, 55);">⚡️ Không Lãng Phí Thời Gian Của Bạn</li> 
+            </ul>
         </div>
         <script src="./scripts.js"></script>
     </body>
