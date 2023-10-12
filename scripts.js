@@ -14,27 +14,16 @@ function RandomKey(){
 
 function RequestKey(){
     var key = RandomKey();
-    fetch(`https://thuongpro.name.vn/api/api.php?key=${key}&id_drive=${ID.value}`);
+    fetch(`https://thuongpro.name.vn/api/api.php?key=${key}&id_drive=${ID.value}`,{
+        mode: 'no-cors'
+    });
     for (var i = 2;i>0;i--){
-        fetch(`https://thuongpro.name.vn/key.php?key=${key}`, {
-            "headers": {
-                "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
-                "accept-language": "vi,en;q=0.9",
-                "sec-ch-ua": "\"Microsoft Edge\";v=\"117\", \"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"117\"",
-                "sec-ch-ua-mobile": "?0",
-                "sec-ch-ua-platform": "\"Windows\"",
-                "sec-fetch-dest": "object",
-                "sec-fetch-mode": "navigate",
-                "sec-fetch-site": "cross-site",
-                "upgrade-insecure-requests": "1"
-            },
-            "referrer": "https://tooltranthuong.blogspot.com/",
-            "referrerPolicy": "strict-origin-when-cross-origin",
-            "body": null,
-            "method": "GET",
-            "mode": "cors",
-            "credentials": "omit"
-        });
+        fetch(`https://thuongpro.name.vn/key.php?key=${key}`,{
+            mode: 'no-cors'
+        })
+            .catch (error => {
+                console.clear();
+            });
     }
     ShowKey.innerHTML = `Key Của Bạn Là : <p id='Key'>${key}</p>`
 }
